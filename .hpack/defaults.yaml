@@ -1,0 +1,15 @@
+language: GHC2021
+when:
+  - condition: impl(ghc < 9.10)
+    then:
+      default-extensions:
+        - DataKinds
+        - DerivingStrategies
+        - DisambiguateRecordFields
+        - ExplicitNamespaces
+        - GADTs
+        - MonoLocalBinds
+        - LambdaCase
+        - RoleAnnotations
+    else:
+      language: GHC2024
